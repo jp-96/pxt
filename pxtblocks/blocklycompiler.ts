@@ -1354,6 +1354,9 @@ namespace pxt.blocks {
             if (field instanceof pxtblockly.FieldTextInput) {
                 return H.mkStringLiteral(f);
             }
+            else if (field instanceof pxtblockly.FieldTextDropdown) {
+                return H.mkStringLiteral(f);
+            }
             else if (field instanceof pxtblockly.FieldTilemap && !field.isGreyBlock) {
                 const project = pxt.react.getTilemapProject();
                 const tmString = field.getValue();
